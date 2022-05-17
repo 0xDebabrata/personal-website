@@ -5,7 +5,7 @@ import styles from "../../styles/Social.module.css"
 
 export default function Wrapper({ imgSrc, imgAlt, url }) {
   return(
-    <a href={url} target="_blank">
+    <a href={url} target="_blank" rel="noreferrer">
       <motion.div 
         whileHover={{
           y: -8
