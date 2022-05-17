@@ -2,7 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { motion } from "framer-motion"
 
+import Social from "../components/Social/Social"
+
 import styles from '../styles/Home.module.css'
+import citrusPng from "../public/images/Citrus.png"
 
 export default function Home() {
   return (
@@ -25,7 +28,8 @@ export default function Home() {
           className={styles.imageWrapper}
         >
           <Image
-            src="/images/Citrus.png"
+            alt="Lemon slice pixel art"
+            src={citrusPng}
             width={150} 
             height={150}
           />
@@ -34,6 +38,7 @@ export default function Home() {
           Debabrata Mondal
         </h1>
 
+        <Social />
       </main>
     </div>
   )
