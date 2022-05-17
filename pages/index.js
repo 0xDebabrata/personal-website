@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { motion } from "framer-motion"
+
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -12,13 +14,22 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.imageWrapper}>
+        <motion.div 
+          animate={{
+            y: [0, 20, 0]
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 2,
+          }}
+          className={styles.imageWrapper}
+        >
           <Image
             src="/images/Citrus.png"
             width={150} 
             height={150}
           />
-        </div>
+        </motion.div>
         <h1 className={styles.title}>
           Debabrata Mondal
         </h1>
