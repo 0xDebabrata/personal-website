@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Head from 'next/head'
 import Image from 'next/image'
 import { motion } from "framer-motion"
@@ -8,6 +9,7 @@ import styles from '../styles/Home.module.css'
 import citrusPng from "../public/images/Citrus.png"
 
 export default function Home() {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -39,6 +41,21 @@ export default function Home() {
         </h1>
 
         <Social />
+
+        <div className={styles.wrapper}>
+          <a href='https://github.com/0xDebabrata' target='__blank' rel='noopener'>
+            <button
+              className={styles.projects}>
+              Projects
+            </button>
+          </a>
+          <a href='mailto:debabratajr@gmail.com'>
+            <button
+              className={styles.projects}>
+              Contact
+            </button>
+          </a>
+        </div>
       </main>
     </div>
   )
